@@ -17,7 +17,8 @@ public class MainActivity extends ActionBarActivity {
     Button scissorsButton;
     int Player;
     public void checkWin(){
-        
+        //Testing github with a comment here
+        String win = "Winner";
     }
 
     public String findPlay(int num){
