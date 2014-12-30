@@ -59,6 +59,7 @@
                 android:layout_height="wrap_content"
                 />
             <TextView
+                android:id="@+id/compChoice"
                 android:text="Rock"
                 android:textSize="20sp"
                 android:layout_gravity="center_horizontal"

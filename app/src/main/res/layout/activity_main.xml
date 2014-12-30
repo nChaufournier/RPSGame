@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context=".MainActivity">
+    android:layout_height="match_parent" tools:context=".MainActivity"
+    android:background="#FFFFFF">
 
     <TextView
         android:text="Rock Paper Scissors"
@@ -13,48 +14,37 @@
         android:textColor="#FFFFFF"
         android:background="#3F51B5"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
-    <RelativeLayout
+        android:layout_height="wrap_content"  />
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:orientation="vertical"
         android:layout_below="@+id/rpsText"
-        android:layout_marginTop="20dp">
-        <Button
-            android:text="ROCK"
-            android:layout_marginTop="10dp"
-            android:paddingTop="60dp"
-            android:paddingBottom="60dp"
-            android:background="#727272"
-            android:textColor="#FFFFFF"
-            android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="#FFFFFF"
+        android:weightSum="3">
+        <ImageButton
+            android:src="@drawable/rock"
+            android:background="#FFFFFF"
             android:id="@+id/rockButton"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
-        <Button
-            android:text="Paper"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:paddingTop="60dp"
-            android:paddingBottom="60dp"
-            android:layout_below="@+id/rockButton"
-            android:background="#727272"
-            android:textColor="#FFFFFF"
-            android:layout_centerHorizontal="true"
+        <ImageButton
+            android:src="@drawable/paper"
+            android:background="#FFFFFF"
             android:id="@+id/paperButton"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="Scissors"
-            android:background="#727272"
-            android:textColor="#FFFFFF"
-            android:paddingTop="60dp"
-            android:paddingBottom="60dp"
-            android:layout_below="@+id/paperButton"
-            android:layout_centerHorizontal="true"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:src="@drawable/scissors"
+            android:background="#FFFFFF"
             android:id="@+id/scissorsButton"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 </RelativeLayout>

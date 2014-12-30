@@ -6,20 +6,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
-import java.util.Random;
 
 
 public class MainActivity extends ActionBarActivity {
-    Button rockButton;
-    Button paperButton;
-    Button scissorsButton;
+    ImageButton rockButton;
+    ImageButton paperButton;
+    ImageButton scissorsButton;
     int Player;
-    public void checkWin(){
-        //Testing github with a comment here
-        String win = "Winner";
-    }
+    Computer computer = new Computer();
 
     public String findPlay(int num){
         if(num == 0){
@@ -36,14 +32,12 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int computer;
 
-        Random number = new Random();
-        computer = number.nextInt(2);
-        findPlay(computer);
-        rockButton = (Button) findViewById(R.id.rockButton);
-        paperButton = (Button) findViewById(R.id.paperButton);
-        scissorsButton = (Button) findViewById(R.id.scissorsButton);
+
+        //findPlay(computer);
+        rockButton = (ImageButton) findViewById(R.id.rockButton);
+        paperButton = (ImageButton) findViewById(R.id.paperButton);
+        scissorsButton = (ImageButton) findViewById(R.id.scissorsButton);
 
         rockButton.setOnClickListener(new View.OnClickListener() {
             @Override
