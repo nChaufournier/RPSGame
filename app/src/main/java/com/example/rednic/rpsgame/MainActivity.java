@@ -43,7 +43,8 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), Results.class);
-                startActivity(i);
+                i.putExtra("key1", "Results");
+                startActivityForResult(i, 1);
                 Player = 0;
 
             }
